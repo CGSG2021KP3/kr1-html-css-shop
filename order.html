@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Заявка на тур: выберите маршрут, месяц, тариф и количество участников. Менеджер перезвонит в течение рабочего дня.">
+  <title>Оформление заявки на тур — Перевал</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Unbounded:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Перевал — на главную">
+        <span class="logo__mark" aria-hidden="true"></span>
+        Перевал
+      </a>
+      <nav class="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог туров</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Оформить заявку</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
+    </div>
+  </header>
+
+  <main>
+    <nav class="container breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Оформление заявки</li>
+      </ol>
+    </nav>
+
+    <section class="section section--tight" aria-labelledby="order-title">
+      <div class="container">
+        <h1 id="order-title">Заявка на тур</h1>
+        <div class="order-layout">
+          <form class="form" action="success.html" method="get">
+            <fieldset class="form__group">
+              <legend class="form__legend">Контактные данные</legend>
+              <div class="form__field form__field--full">
+                <label class="form__label" for="name">Имя и фамилия <span class="form__required" aria-hidden="true">*</span></label>
+                <input class="form__input" id="name" name="name" type="text" required minlength="2" autocomplete="name">
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="email">E-mail <span class="form__required" aria-hidden="true">*</span></label>
+                <input class="form__input" id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.ru">
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="phone">Телефон <span class="form__required" aria-hidden="true">*</span></label>
+                <input class="form__input" id="phone" name="phone" type="tel" required pattern="\+?[0-9\s\-\(\)]{10,18}" placeholder="+7 900 123-45-67" autocomplete="tel" aria-describedby="phone-hint">
+                <span class="form__hint" id="phone-hint">10–11 цифр, можно с пробелами и скобками</span>
+              </div>
+            </fieldset>
+
+            <fieldset class="form__group">
+              <legend class="form__legend">Поездка</legend>
+              <div class="form__field form__field--full">
+                <label class="form__label" for="tour">Тур <span class="form__required" aria-hidden="true">*</span></label>
+                <select class="form__select" id="tour" name="tour" required>
+                  <option value="">Выберите тур</option>
+                  <option value="altai">Алтай: Чуйский тракт и Мультинские озёра</option>
+                  <option value="baikal">Байкал: прозрачный лёд и остров Ольхон</option>
+                  <option value="karelia">Карелия: сплав по Шуе и водопад Кивач</option>
+                  <option value="kamchatka">Камчатка: вулканы и Долина гейзеров</option>
+                  <option value="teriberka" disabled>Териберка: Баренцево море и северное сияние — мест нет</option>
+                  <option value="dagestan">Дагестан: Сулакский каньон и Гуниб</option>
+                  <option value="khibiny">Хибины: снегоступы и полярная ночь</option>
+                  <option value="curonian">Куршская коса: дюны и Танцующий лес</option>
+                </select>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="month">Желаемый месяц <span class="form__required" aria-hidden="true">*</span></label>
+                <select class="form__select" id="month" name="month" required>
+                  <option value="">Выберите месяц</option>
+                  <option value="2027-02">Февраль 2027</option>
+                  <option value="2027-03">Март 2027</option>
+                  <option value="2027-06">Июнь 2027</option>
+                  <option value="2027-07">Июль 2027</option>
+                  <option value="2027-08">Август 2027</option>
+                </select>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="people">Количество участников <span class="form__required" aria-hidden="true">*</span></label>
+                <input class="form__input" id="people" name="people" type="number" min="1" max="12" value="1" required>
+              </div>
+              <fieldset class="form__field form__field--full">
+                <legend class="form__label">Тариф</legend>
+                <div class="form__options">
+                  <label class="form__option"><input type="radio" name="tariff" value="basic" checked> Базовый</label>
+                  <label class="form__option"><input type="radio" name="tariff" value="comfort"> Комфорт</label>
+                  <label class="form__option form__option--disabled"><input type="radio" name="tariff" value="premium" disabled> Премиум (мест нет)</label>
+                </div>
+              </fieldset>
+              <div class="form__field form__field--full">
+                <label class="form__label" for="comment">Комментарий</label>
+                <textarea class="form__textarea" id="comment" name="comment" maxlength="1000" placeholder="Например: едем с ребёнком 13 лет, нужен вегетарианский завтрак"></textarea>
+              </div>
+            </fieldset>
+
+            <label class="form__checkbox">
+              <input type="checkbox" name="agree" required>
+              <span>Согласен на обработку персональных данных и с <a href="contacts.html#office">условиями бронирования</a></span>
+            </label>
+
+            <div class="form__actions">
+              <button class="button" type="submit">Отправить заявку</button>
+              <button class="button button--outline" type="reset">Очистить форму</button>
+            </div>
+          </form>
+
+          <aside class="order-info" aria-labelledby="order-info-title">
+            <h2 class="order-info__title" id="order-info-title">Что будет дальше</h2>
+            <ul class="order-info__list">
+              <li class="order-info__text"><strong>Звонок менеджера.</strong> В течение рабочего дня уточним даты и состав группы.</li>
+              <li class="order-info__text"><strong>Бронь на 3 дня.</strong> Места закрепляются за вами без оплаты.</li>
+              <li class="order-info__text"><strong>Предоплата 20%.</strong> Остаток вносится за 14 дней до старта.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <a class="logo logo--light" href="index.html">
+          <span class="logo__mark" aria-hidden="true"></span>
+          Перевал
+        </a>
+        <p class="site-footer__about">Авторские туры по России в небольших группах. Учебный проект, бронирование не настоящее.</p>
+      </div>
+      <nav aria-label="Разделы сайта">
+        <p class="site-footer__title">Разделы</p>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Почему мы</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные туры</a></li>
+          <li><a class="site-footer__link" href="index.html#steps">Как забронировать</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="site-footer__link" href="catalog.html">Каталог туров</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="site-footer__title">Контакты</p>
+        <address class="site-footer__address">
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+            <li><a class="site-footer__link" href="mailto:hello@pereval.example">hello@pereval.example</a></li>
+            <li><a class="site-footer__link" href="contacts.html#office">Москва, Пятницкая ул., 12</a></li>
+          </ul>
+        </address>
+      </div>
+      <p class="site-footer__copy">&copy; 2026 «Перевал». Контрольная работа №1 по дисциплине «Фронтенд и бэкенд разработка».</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">
+    <svg class="to-top__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+  </a>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог авторских туров по России: горы, озёра, Север и море. Фильтры по длительности, сложности и сезону.">
+  <title>Каталог туров — Перевал</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Unbounded:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Перевал — на главную">
+        <span class="logo__mark" aria-hidden="true"></span>
+        Перевал
+      </a>
+      <nav class="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог туров</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Оформить заявку</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
+    </div>
+  </header>
+
+  <main>
+    <nav class="container breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Каталог туров</li>
+      </ol>
+    </nav>
+
+    <section class="section section--tight" aria-labelledby="catalog-title">
+      <div class="container">
+        <h1 id="catalog-title">Каталог туров</h1>
+        <nav aria-label="Категории туров">
+          <ul class="category-list">
+            <li><a class="category-list__link category-list__link--active" href="catalog.html" aria-current="page">Все туры</a></li>
+            <li><a class="category-list__link" href="catalog.html?category=mountains">Горы</a></li>
+            <li><a class="category-list__link" href="catalog.html?category=water">Озёра и реки</a></li>
+            <li><a class="category-list__link" href="catalog.html?category=north">Север</a></li>
+            <li><a class="category-list__link" href="catalog.html?category=sea">Море</a></li>
+          </ul>
+        </nav>
+
+        <div class="catalog">
+          <aside class="filters" aria-labelledby="filters-title">
+            <h2 class="filters__title" id="filters-title">Фильтры</h2>
+            <form action="catalog.html" method="get">
+              <fieldset class="filters__group">
+                <legend class="filters__legend">Длительность</legend>
+                <label class="filters__option"><input type="checkbox" name="days" value="short"> до 5 дней</label>
+                <label class="filters__option"><input type="checkbox" name="days" value="week"> 6–7 дней</label>
+                <label class="filters__option"><input type="checkbox" name="days" value="long"> больше недели</label>
+              </fieldset>
+              <fieldset class="filters__group">
+                <legend class="filters__legend">Сложность</legend>
+                <label class="filters__option"><input type="radio" name="level" value="any" checked> любая</label>
+                <label class="filters__option"><input type="radio" name="level" value="easy"> лёгкая</label>
+                <label class="filters__option"><input type="radio" name="level" value="medium"> средняя</label>
+                <label class="filters__option"><input type="radio" name="level" value="hard"> высокая</label>
+              </fieldset>
+              <fieldset class="filters__group">
+                <legend class="filters__legend">Сезон</legend>
+                <label class="filters__option"><input type="checkbox" name="season" value="summer"> лето</label>
+                <label class="filters__option"><input type="checkbox" name="season" value="winter"> зима</label>
+              </fieldset>
+              <div class="filters__actions">
+                <button class="button button--wide" type="submit">Показать туры</button>
+                <button class="button button--outline button--wide" type="reset">Сбросить</button>
+              </div>
+            </form>
+          </aside>
+
+          <section class="catalog__results" aria-labelledby="results-title">
+            <div class="catalog__toolbar">
+              <h2 class="visually-hidden" id="results-title">Найденные туры</h2>
+              <p>Найдено 8 туров</p>
+              <form class="catalog__sort" action="catalog.html" method="get">
+                <label for="sort">Сортировка</label>
+                <select class="form__select" id="sort" name="sort">
+                  <option value="popular">сначала популярные</option>
+                  <option value="cheap">сначала дешевле</option>
+                  <option value="short">сначала короткие</option>
+                </select>
+              </form>
+            </div>
+            <ul class="tour-grid">
+          <li>
+            <article class="tour-card">
+            <span class="badge tour-card__badge">Хит сезона</span>
+              <img class="tour-card__image" src="images/altai.svg" alt="" width="480" height="320" loading="lazy">
+              <div class="tour-card__body">
+                <ul class="tour-card__facts">
+                  <li>Горный Алтай</li>
+                  <li>7 дней</li>
+                  <li>Сложность: средняя</li>
+                </ul>
+                <h3 class="tour-card__title"><a href="product.html">Алтай: Чуйский тракт и Мультинские озёра</a></h3>
+                <p class="tour-card__description">Перевалы Чике-Таман и Кату-Ярык, ночёвка у горного озера и лёгкий трек к водопаду.</p>
+                <div class="tour-card__footer">
+                  <p class="tour-card__price">от <span class="tour-card__price-value">54&nbsp;900&nbsp;&#8381;</span></p>
+                  <a class="button button--small" href="product.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="tour-card">
+            <span class="badge badge--new tour-card__badge">Новинка</span>
+              <img class="tour-card__image" src="images/baikal.svg" alt="" width="480" height="320" loading="lazy">
+              <div class="tour-card__body">
+                <ul class="tour-card__facts">
+                  <li>Иркутская область</li>
+                  <li>6 дней</li>
+                  <li>Сложность: лёгкая</li>
+                </ul>
+                <h3 class="tour-card__title"><a href="product.html">Байкал: прозрачный лёд и остров Ольхон</a></h3>
+                <p class="tour-card__description">Ледовые гроты, мыс Хобой и поездка по льду на хивусе. Февраль и март.</p>
+                <div class="tour-card__footer">
+                  <p class="tour-card__price">от <span class="tour-card__price-value">62&nbsp;500&nbsp;&#8381;</span></p>
+                  <a class="button button--small" href="product.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="tour-card">
+            <span class="badge badge--sale tour-card__badge">Скидка 15%</span>
+              <img class="tour-card__image" src="images/karelia.svg" alt="" width="480" height="320" loading="lazy">
+              <div class="tour-card__body">
+                <ul class="tour-card__facts">
+                  <li>Республика Карелия</li>
+                  <li>4 дня</li>
+                  <li>Сложность: лёгкая</li>
+                </ul>
+                <h3 class="tour-card__title"><a href="product.html">Карелия: сплав по Шуе и водопад Кивач</a></h3>
+                <p class="tour-card__description">Спокойный сплав на катамаранах, баня на берегу и вечер у костра.</p>
+                <div class="tour-card__footer">
+                  <p class="tour-card__price">от <span class="tour-card__price-value">28&nbsp;900&nbsp;&#8381;<s class="tour-card__price-old">33&nbsp;900&nbsp;&#8381;</s></span></p>
+                  <a class="button button--small" href="product.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="tour-card">
+              <img class="tour-card__image" src="images/kamchatka.svg" alt="" width="480" height="320" loading="lazy">
+              <div class="tour-card__body">
+                <ul class="tour-card__facts">
+                  <li>Камчатский край</li>
+                  <li>9 дней</li>
+                  <li>Сложность: высокая</li>
+                </ul>
+                <h3 class="tour-card__title"><a href="product.html">Камчатка: вулканы и Долина гейзеров</a></h3>
+                <p class="tour-card__description">Восхождение на Горелый, термальные источники и вертолётная экскурсия.</p>
+                <div class="tour-card__footer">
+                  <p class="tour-card__price">от <span class="tour-card__price-value">159&nbsp;000&nbsp;&#8381;</span></p>
+                  <a class="button button--small" href="product.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="tour-card">
+            <span class="badge badge--new tour-card__badge">Новинка</span>
+              <img class="tour-card__image" src="images/dagestan.svg" alt="" width="480" height="320" loading="lazy">
+              <div class="tour-card__body">
+                <ul class="tour-card__facts">
+                  <li>Республика Дагестан</li>
+                  <li>6 дней</li>
+                  <li>Сложность: средняя</li>
+                </ul>
+                <h3 class="tour-card__title"><a href="product.html">Дагестан: Сулакский каньон и Гуниб</a></h3>
+                <p class="tour-card__description">Каньон глубже Гранд-Каньона, аул-призрак Гамсутль и горская кухня.</p>
+                <div class="tour-card__footer">
+                  <p class="tour-card__price">от <span class="tour-card__price-value">49&nbsp;900&nbsp;&#8381;</span></p>
+                  <a class="button button--small" href="product.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="tour-card">
+              <img class="tour-card__image" src="images/khibiny.svg" alt="" width="480" height="320" loading="lazy">
+              <div class="tour-card__body">
+                <ul class="tour-card__facts">
+                  <li>Мурманская область</li>
+                  <li>5 дней</li>
+                  <li>Сложность: средняя</li>
+                </ul>
+                <h3 class="tour-card__title"><a href="product.html">Хибины: снегоступы и полярная ночь</a></h3>
+                <p class="tour-card__description">Походы на снегоступах, музей камня в Кировске и ночь в горном приюте.</p>
+                <div class="tour-card__footer">
+                  <p class="tour-card__price">от <span class="tour-card__price-value">41&nbsp;500&nbsp;&#8381;</span></p>
+                  <a class="button button--small" href="product.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="tour-card">
+              <img class="tour-card__image" src="images/curonian.svg" alt="" width="480" height="320" loading="lazy">
+              <div class="tour-card__body">
+                <ul class="tour-card__facts">
+                  <li>Калининградская область</li>
+                  <li>5 дней</li>
+                  <li>Сложность: лёгкая</li>
+                </ul>
+                <h3 class="tour-card__title"><a href="product.html">Куршская коса: дюны и Танцующий лес</a></h3>
+                <p class="tour-card__description">Высота Эфа, орнитологическая станция и вечера на берегу Балтики.</p>
+                <div class="tour-card__footer">
+                  <p class="tour-card__price">от <span class="tour-card__price-value">34&nbsp;500&nbsp;&#8381;</span></p>
+                  <a class="button button--small" href="product.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="tour-card tour-card--soldout">
+            <span class="badge badge--muted tour-card__badge">Мест нет</span>
+              <img class="tour-card__image" src="images/teriberka.svg" alt="" width="480" height="320" loading="lazy">
+              <div class="tour-card__body">
+                <ul class="tour-card__facts">
+                  <li>Мурманская область</li>
+                  <li>4 дня</li>
+                  <li>Сложность: лёгкая</li>
+                </ul>
+                <h3 class="tour-card__title"><a href="product.html">Териберка: Баренцево море и северное сияние</a></h3>
+                <p class="tour-card__description">Охота за сиянием, берег с китовыми костями и ужин из северной рыбы.</p>
+                <div class="tour-card__footer">
+                  <p class="tour-card__price">от <span class="tour-card__price-value">47&nbsp;800&nbsp;&#8381;</span></p>
+                  <span class="button button--small button--disabled" aria-disabled="true">Мест нет</span>
+                </div>
+              </div>
+            </article>
+          </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <a class="logo logo--light" href="index.html">
+          <span class="logo__mark" aria-hidden="true"></span>
+          Перевал
+        </a>
+        <p class="site-footer__about">Авторские туры по России в небольших группах. Учебный проект, бронирование не настоящее.</p>
+      </div>
+      <nav aria-label="Разделы сайта">
+        <p class="site-footer__title">Разделы</p>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Почему мы</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные туры</a></li>
+          <li><a class="site-footer__link" href="index.html#steps">Как забронировать</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="site-footer__link" href="catalog.html">Каталог туров</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="site-footer__title">Контакты</p>
+        <address class="site-footer__address">
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+            <li><a class="site-footer__link" href="mailto:hello@pereval.example">hello@pereval.example</a></li>
+            <li><a class="site-footer__link" href="contacts.html#office">Москва, Пятницкая ул., 12</a></li>
+          </ul>
+        </address>
+      </div>
+      <p class="site-footer__copy">&copy; 2026 «Перевал». Контрольная работа №1 по дисциплине «Фронтенд и бэкенд разработка».</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">
+    <svg class="to-top__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+  </a>
+
+</body>
+</html>

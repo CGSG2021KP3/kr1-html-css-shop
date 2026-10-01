@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Заявка принята, менеджер свяжется с вами в течение рабочего дня.">
+  <title>Заявка отправлена — Перевал</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Unbounded:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Перевал — на главную">
+        <span class="logo__mark" aria-hidden="true"></span>
+        Перевал
+      </a>
+      <nav class="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог туров</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Оформить заявку</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container message" aria-labelledby="success-title">
+      <svg class="message__icon" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#1d5a48"/><path d="M22 37l10 10 18-20" fill="none" stroke="#e2a132" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h1 class="message__title" id="success-title">Заявка отправлена</h1>
+      <p class="message__text">Менеджер перезвонит в течение рабочего дня и подтвердит даты. Если заявка срочная, позвоните нам: <a href="tel:+74950000000">+7 (495) 000-00-00</a>.</p>
+      <div class="button-group">
+        <a class="button" href="catalog.html">Вернуться в каталог</a>
+        <a class="button button--outline" href="index.html">На главную</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <a class="logo logo--light" href="index.html">
+          <span class="logo__mark" aria-hidden="true"></span>
+          Перевал
+        </a>
+        <p class="site-footer__about">Авторские туры по России в небольших группах. Учебный проект, бронирование не настоящее.</p>
+      </div>
+      <nav aria-label="Разделы сайта">
+        <p class="site-footer__title">Разделы</p>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Почему мы</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные туры</a></li>
+          <li><a class="site-footer__link" href="index.html#steps">Как забронировать</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="site-footer__link" href="catalog.html">Каталог туров</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="site-footer__title">Контакты</p>
+        <address class="site-footer__address">
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+            <li><a class="site-footer__link" href="mailto:hello@pereval.example">hello@pereval.example</a></li>
+            <li><a class="site-footer__link" href="contacts.html#office">Москва, Пятницкая ул., 12</a></li>
+          </ul>
+        </address>
+      </div>
+      <p class="site-footer__copy">&copy; 2026 «Перевал». Контрольная работа №1 по дисциплине «Фронтенд и бэкенд разработка».</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">
+    <svg class="to-top__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+  </a>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Контакты турагентства «Перевал»: телефон, e-mail, адрес офиса в Москве, часы работы и форма для вопросов.">
+  <title>Контакты — Перевал</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Unbounded:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Перевал — на главную">
+        <span class="logo__mark" aria-hidden="true"></span>
+        Перевал
+      </a>
+      <nav class="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог туров</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Оформить заявку</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
+    </div>
+  </header>
+
+  <main>
+    <nav class="container breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Контакты</li>
+      </ol>
+    </nav>
+
+    <section class="section section--tight" id="office" aria-labelledby="contacts-title">
+      <div class="container">
+        <h1 id="contacts-title">Контакты</h1>
+        <div class="contacts section--tight">
+          <dl class="contacts__list">
+            <div><dt class="contacts__name">Телефон</dt><dd class="contacts__value"><a href="tel:+74950000000">+7 (495) 000-00-00</a></dd></div>
+            <div><dt class="contacts__name">E-mail</dt><dd class="contacts__value"><a href="mailto:hello@pereval.example">hello@pereval.example</a></dd></div>
+            <div><dt class="contacts__name">Офис</dt><dd class="contacts__value">Москва, Пятницкая ул., 12, офис 4</dd></div>
+            <div><dt class="contacts__name">Часы работы</dt><dd class="contacts__value">Пн–Пт 10:00–19:00, Сб 11:00–16:00</dd></div>
+          </dl>
+          <div class="contacts__map">
+            <img src="images/map.svg" alt="Схема проезда: офис в 5 минутах пешком от метро Новокузнецкая" width="560" height="360">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface" aria-labelledby="feedback-title">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <h2 class="section__title" id="feedback-title">Задать вопрос</h2>
+            <p class="section__lead">Хотите сразу забронировать? Перейдите к <a href="order.html">форме заявки</a>.</p>
+          </div>
+        </div>
+        <form class="form" action="success.html" method="get">
+          <fieldset class="form__group">
+            <legend class="visually-hidden">Вопрос менеджеру</legend>
+            <div class="form__field">
+              <label class="form__label" for="fb-name">Имя <span class="form__required" aria-hidden="true">*</span></label>
+              <input class="form__input" id="fb-name" name="name" type="text" required minlength="2" autocomplete="name">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="fb-email">E-mail <span class="form__required" aria-hidden="true">*</span></label>
+              <input class="form__input" id="fb-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="form__field form__field--full">
+              <label class="form__label" for="fb-topic">Тема <span class="form__required" aria-hidden="true">*</span></label>
+              <select class="form__select" id="fb-topic" name="topic" required>
+                <option value="">Выберите тему</option>
+                <option value="tour">Вопрос о туре</option>
+                <option value="booking">Изменение брони</option>
+                <option value="group">Корпоративная поездка</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+            <div class="form__field form__field--full">
+              <label class="form__label" for="fb-message">Сообщение <span class="form__required" aria-hidden="true">*</span></label>
+              <textarea class="form__textarea" id="fb-message" name="message" required maxlength="1000"></textarea>
+            </div>
+          </fieldset>
+          <label class="form__checkbox">
+            <input type="checkbox" name="agree" required>
+            <span>Согласен на обработку персональных данных</span>
+          </label>
+          <div class="form__actions">
+            <button class="button" type="submit">Отправить вопрос</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <a class="logo logo--light" href="index.html">
+          <span class="logo__mark" aria-hidden="true"></span>
+          Перевал
+        </a>
+        <p class="site-footer__about">Авторские туры по России в небольших группах. Учебный проект, бронирование не настоящее.</p>
+      </div>
+      <nav aria-label="Разделы сайта">
+        <p class="site-footer__title">Разделы</p>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Почему мы</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные туры</a></li>
+          <li><a class="site-footer__link" href="index.html#steps">Как забронировать</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="site-footer__link" href="catalog.html">Каталог туров</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="site-footer__title">Контакты</p>
+        <address class="site-footer__address">
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+            <li><a class="site-footer__link" href="mailto:hello@pereval.example">hello@pereval.example</a></li>
+            <li><a class="site-footer__link" href="contacts.html#office">Москва, Пятницкая ул., 12</a></li>
+          </ul>
+        </address>
+      </div>
+      <p class="site-footer__copy">&copy; 2026 «Перевал». Контрольная работа №1 по дисциплине «Фронтенд и бэкенд разработка».</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">
+    <svg class="to-top__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+  </a>
+
+</body>
+</html>
